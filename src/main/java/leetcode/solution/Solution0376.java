@@ -1,4 +1,4 @@
-package leetcode.problem;
+package leetcode.solution;
 
 //
 // "Волнистая" последовательность
