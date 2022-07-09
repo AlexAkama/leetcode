@@ -19,4 +19,16 @@ public class TreeNode {
         this.right = right;
     }
 
+    public int getVal() {
+        return val;
+    }
+
+    public TreeNode getLeft() {
+        return left;
+    }
+
+    public TreeNode getRight() {
+        return right;
+    }
+
 }
