@@ -1,6 +1,5 @@
 package leetcode.utils;
 
-
 import leetcode.solution.TreeNode;
 
 import java.io.Serializable;
