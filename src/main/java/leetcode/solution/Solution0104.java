@@ -10,12 +10,8 @@ package leetcode.solution;
 public class Solution0104 {
 
     public int maxDepth(TreeNode root) {
-        return getDepth(root, 1);
-    }
-
-    private int getDepth(TreeNode node, int level) {
-        if (node == null) return level;
-        return Math.max(getDepth(node.left, level + 1), getDepth(node.right, level + 1));
+        if (root == null) return 0;
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
     }
 
 }
