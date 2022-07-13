@@ -12,11 +12,10 @@ import java.util.List;
 // Вторая сделать "срезы" каждого уровня и потом взять последний элемент - громоздко, не рационально по памяти
 // Третья - проходить весь лист справа на лево и записывать первый элемент на уровне, вопрос: но как это определить?
 // По длине массива!!!
-//
-//Runtime: 1 ms, faster than 95.06% of Java online submissions for Binary Tree Right Side View.
-//Memory Usage: 43.4 MB, less than 5.70% of Java online submissions for Binary Tree Right Side View.
 public class Solution0199 {
 
+    //Runtime: 1 ms, faster than 95.06% of Java online submissions for Binary Tree Right Side View.
+    //Memory Usage: 43.4 MB, less than 5.70% of Java online submissions for Binary Tree Right Side View.
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         foo(root, 0, list);

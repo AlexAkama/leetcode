@@ -6,6 +6,8 @@ package leetcode.solution.ready;
 //
 public class Solution0021 {
 
+    //Runtime: 1 ms, faster than 78.95% of Java online submissions for Merge Two Sorted Lists.
+    //Memory Usage: 43.2 MB, less than 42.22% of Java online submissions for Merge Two Sorted Lists.
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode p1 = list1;
         ListNode p2 = list2;
