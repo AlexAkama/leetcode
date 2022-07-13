@@ -1,5 +1,6 @@
 package leetcode.utils;
 
+import leetcode.solution.ListNode;
 import leetcode.solution.TreeNode;
 
 import java.io.Serializable;
@@ -44,6 +45,14 @@ public class Utils {
         System.out.printf("%4d", node.getVal());
         printBinaryTree(node.getLeft());
         printBinaryTree(node.getRight());
+    }
+
+    public static void printNodeList(ListNode node) {
+        while (node != null) {
+            System.out.print(node.getVal());
+            node = node.getNext();
+        }
+        System.out.println();
     }
 
 }
