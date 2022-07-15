@@ -1,4 +1,4 @@
-package leetcode.solution;
+package leetcode.solution.ready;
 
 //
 // Поиск первой бед версии
