@@ -1,4 +1,4 @@
-package leetcode.solution;
+package leetcode.solution.ready;
 
 //
 // Возвращает кол-во битов "1" в числе (вес Хэмминга)
