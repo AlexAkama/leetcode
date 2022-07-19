@@ -1,0 +1,22 @@
+Проверить валидность телефона
+987-123-4567
+123 456 7890 - не валидный
+(123) 456-7890
+
+Регулярка ^(\(\d{3}\) |\d{3}-)\d{3}-\d{4}$
+
+НАдо использовать команду grep
+    — утилита командной строки, которая находит на вводе строки, отвечающие заданному регулярному выражению,
+    и выводит их, если вывод не отменён специальным ключом. Название представляет собой акроним английской фразы
+    «search globally for lines matching the regular expression, and print them»
+    — «искать везде строки, соответствующие регулярному выражению, и выводить их».
+
+Ключи
+-o for printing results in newline
+-P to enable standard PCRE regex matching followed by the regex expression.
+
+
+Решение:
+grep -P '^(\(\d{3}\) |\d{3}-)\d{3}-\d{4}$' file.txt
+Runtime: 150 ms, faster than 14.66% of Bash online submissions for Valid Phone Numbers.
+Memory Usage: 3.1 MB, less than 99.73% of Bash online submissions for Valid Phone Numbers.
