@@ -42,17 +42,17 @@ public class Utils {
 
     public static void printBinaryTree(TreeNode node) {
         if (node == null) return;
-        System.out.printf("%4d", node.getVal());
-        printBinaryTree(node.getLeft());
-        printBinaryTree(node.getRight());
+        System.out.printf("%4d", node.val);
+        printBinaryTree(node.left);
+        printBinaryTree(node.left);
     }
 
     public static void printNodeList(ListNode node) {
         while (node != null) {
-            System.out.print(node.getVal());
-            node = node.getNext();
+            System.out.print(node.val + " -> ");
+            node = node.next;
         }
-        System.out.println();
+        System.out.println("null");
     }
 
 }
