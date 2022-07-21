@@ -14,13 +14,13 @@ public class Solution0092 {
 
     //Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.
     //Memory Usage: 41.3 MB, less than 77.99% of Java online submissions for Reverse Linked List II.
-    public leetcode.solution.ListNode reverseBetween(leetcode.solution.ListNode head, int left, int right) {
+    public leetcode.solution.ListNode reverseBetween(ListNode head, int left, int right) {
         if (head.next == null) return head;
-        leetcode.solution.ListNode node = head;
-        leetcode.solution.ListNode start = null;
-        leetcode.solution.ListNode finish = null;
-        leetcode.solution.ListNode prev = null;
-        leetcode.solution.ListNode next = null;
+        ListNode node = head;
+        ListNode start = null;
+        ListNode finish = null;
+        ListNode prev = null;
+        ListNode next = null;
         int pos = 1;
         while (node != null) {
             if (node.next != null && pos + 1 == left) prev = node;
@@ -41,10 +41,10 @@ public class Solution0092 {
         return head;
     }
 
-    public leetcode.solution.ListNode reverseList(leetcode.solution.ListNode head, leetcode.solution.ListNode after) {
+    public ListNode reverseList(ListNode head, ListNode after) {
         if (head == null) return null;
-        leetcode.solution.ListNode prev = after;
-        leetcode.solution.ListNode node = head;
+        ListNode prev = after;
+        ListNode node = head;
         ListNode next;
         while (node != null) {
             next = node.next;
