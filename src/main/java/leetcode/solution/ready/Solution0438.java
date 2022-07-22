@@ -40,4 +40,24 @@ public class Solution0438 {
         return true;
     }
 
+    // Вариант с двумя указателями
+    //Runtime: 13 ms, faster than 70.44% of Java online submissions for Find All Anagrams in a String.
+    //Memory Usage: 47.9 MB, less than 55.12% of Java online submissions for Find All Anagrams in a String.
+    public List<Integer> findAnagrams2(String s, String p) {
+        List<Integer> list = new ArrayList<>();
+        if (p.length() > s.length()) return list;
+        int[] targetInts = new int[26];
+        for (char c : p.toCharArray()) targetInts[c - 'a']++;
+        char[] chars = s.toCharArray();
+        int left = 0;
+        int right = 0;
+        int count = p.length();
+        while (right < s.length()) {
+            if (targetInts[chars[right++] - 'a']-- > 0) count--;
+            if (count == 0) list.add(left);
+            if (right - left == p.length() && targetInts[chars[left++] - 'a']++ >=0) count++;
+        }
+        return list;
+    }
+
 }
