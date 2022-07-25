@@ -12,7 +12,9 @@ public class Utils {
     }
 
     public static void printListInString(List<? extends Serializable> list) {
-        list.forEach(System.out::print);
+        for (Serializable element : list) {
+            System.out.print(element + " ");
+        }
         System.out.println();
     }
 
