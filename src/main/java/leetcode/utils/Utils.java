@@ -4,7 +4,9 @@ import leetcode.solution.ListNode;
 import leetcode.solution.TreeNode;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Utils {
 
@@ -20,9 +22,16 @@ public class Utils {
 
     public static void printIntArray(int[] ints) {
         for (int anInt : ints) {
-            System.out.print(anInt);
+            System.out.print(anInt + " ");
         }
         System.out.println();
+    }
+
+    public static void printIntArray(int[] ints, String expected) {
+        String accept = Arrays.stream(ints)
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining(" "));
+        System.out.println(expected + ": " + accept + " -" + accept.equals(expected));
     }
 
     public static void printIntArrayMonospace(int[] ints) {
