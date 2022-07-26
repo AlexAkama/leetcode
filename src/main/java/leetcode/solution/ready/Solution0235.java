@@ -4,8 +4,10 @@ import leetcode.solution.TreeNode;
 
 //
 // TreeNode
-// Поиск минимального общего предка
+// Поиск минимального общего предка в бинарном дереве поиска
+// https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 // Важно: TreeNode(int x) { val = x; }
+// Значения отсортированы!!!
 //
 public class Solution0235 {
 
