@@ -1,7 +1,5 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.TreeNode;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 
@@ -14,10 +12,10 @@ public class Solution0114 {
 
     //Runtime: 1 ms, faster than 78.58% of Java online submissions for Flatten Binary Tree to Linked List.
     //Memory Usage: 42.9 MB, less than 28.80% of Java online submissions for Flatten Binary Tree to Linked List.
-    public void flatten(leetcode.solution.TreeNode root) {
+    public void flatten(TreeNode root) {
         while (root != null) {
             if (root.left != null) {
-                leetcode.solution.TreeNode node = root.left;
+                TreeNode node = root.left;
                 while (node.right != null) node = node.right;
                 node.right = root.right;
                 root.right = root.left;
@@ -28,7 +26,7 @@ public class Solution0114 {
     }
 
 
-    private final Deque<leetcode.solution.TreeNode> deque = new ArrayDeque<>();
+    private final Deque<TreeNode> deque = new ArrayDeque<>();
 
     //Runtime: 4 ms, faster than 5.95% of Java online submissions for Flatten Binary Tree to Linked List.
     //Memory Usage: 42.7 MB, less than 52.44% of Java online submissions for Flatten Binary Tree to Linked List.
