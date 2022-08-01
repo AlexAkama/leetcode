@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 //
-// Реализация стека
+// Реализация стека на основе двух очередей
 // https://leetcode.com/problems/implement-stack-using-queues/
 //
 // Первое, что пришло в голову, не есть себе голову и сделать на LinkedList
@@ -24,16 +24,10 @@ public class Solution0225 {
     public void push(int x) {
         if (basket1.isEmpty()) {
             basket1.offer(x);
-            int size = basket2.size();
-            for (int i = 0; i < size; i++) {
-                basket1.offer(basket2.poll());
-            }
+            while (!basket2.isEmpty()) basket1.offer(basket2.poll());
         } else {
             basket2.offer(x);
-            int size = basket1.size();
-            for (int i = 0; i < size; i++) {
-                basket2.offer(basket1.poll());
-            }
+            while (!basket1.isEmpty()) basket2.offer(basket1.poll());
         }
     }
 
