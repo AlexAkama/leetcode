@@ -1,5 +1,9 @@
 package leetcode.solution.ready;
 
+//
+// Конвертация 1D массива в 2D
+// https://leetcode.com/problems/convert-1d-array-into-2d-array/submissions/
+//
 public class Solution2022 {
 
     //Runtime: 14 ms, faster than 8.00% of Java online submissions for Convert 1D Array Into 2D Array.
@@ -29,6 +33,18 @@ public class Solution2022 {
         return res;
     }
 
-
+    //Runtime: 5 ms, faster than 93.00% of Java online submissions for Convert 1D Array Into 2D Array.
+    //Memory Usage: 119.5 MB, less than 61.04% of Java online submissions for Convert 1D Array Into 2D Array.
+    public int[][] construct2DArray3(int[] original, int m, int n) {
+        if (original.length != m * n) return new int[0][0];
+        int[][] res = new int[m][n];
+        int p = 0;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                res[i][j] = original[p++];
+            }
+        }
+        return res;
+    }
 
 }
