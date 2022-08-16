@@ -8,11 +8,26 @@ import java.util.Arrays;
 //
 public class Solution0387 {
 
+    //Runtime: 11 ms, faster than 80.52% of Java online submissions for First Unique Character in a String.
+    //Memory Usage: 50.1 MB, less than 50.32% of Java online submissions for First Unique Character in a String.
+    //
+    // Мой
+    public int firstUniqChar2(String s) {
+        int[] w = new int[26];
+        char[] chars = s.toCharArray();
+        for (char c : chars) w[c - 'a']++;
+        for (int i = 0; i < chars.length; i++) {
+            if (w[chars[i] - 'a'] == 1) return i;
+        }
+        return -1;
+    }
+
+
     private static final int MAX = Integer.MAX_VALUE;
 
     //Runtime: 6 ms, faster than 96.43% of Java online submissions for First Unique Character in a String.
     //Memory Usage: 49.7 MB, less than 53.51% of Java online submissions for First Unique Character in a String.
-    public int firstUniqChar(String s) {
+    public int firstUniqChar1(String s) {
         int[] w = new int[26];
         int[] p = new int[26];
         Arrays.fill(p, MAX);
