@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.ListNode;
+
 //
 // ListNode
 // Нахождение середины односвязного списка

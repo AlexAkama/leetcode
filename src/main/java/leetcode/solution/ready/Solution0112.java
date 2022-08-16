@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.TreeNode;
+
 //
 // TreeNode
 // Проверка суммы пути до листа

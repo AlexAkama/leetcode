@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.ListNode;
+import leetcode.utils.ListNode;
 
 //
 // ListNode

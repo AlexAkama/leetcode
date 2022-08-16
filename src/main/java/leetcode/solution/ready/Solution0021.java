@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.ListNode;
+
 //
 // ListNode
 // Слияние двух сортированных односвязных листов

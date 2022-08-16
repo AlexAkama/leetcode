@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.Node;
+import leetcode.utils.Node;
 
 import java.util.ArrayList;
 import java.util.List;

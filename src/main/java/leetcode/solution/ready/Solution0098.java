@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.TreeNode;
+import leetcode.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,17 +23,17 @@ public class Solution0098 {
 
     //Runtime: 0 ms, faster than 100.00% of Java online submissions for Validate Binary Search Tree.
     //Memory Usage: 43.9 MB, less than 55.24% of Java online submissions for Validate Binary Search Tree.
-    public boolean isValidBST(leetcode.solution.TreeNode root) {
+    public boolean isValidBST(TreeNode root) {
         return foo(root, Long.MIN_VALUE, Long.MAX_VALUE);
     }
 
-    private boolean foo(leetcode.solution.TreeNode node, long min, long max) {
+    private boolean foo(TreeNode node, long min, long max) {
         if (node == null) return true;
         if (node.val <= min || node.val >= max) return false;
         return foo(node.left, min, node.val) && foo(node.right, node.val, max);
     }
 
-    public boolean isValidBST2(leetcode.solution.TreeNode root) {
+    public boolean isValidBST2(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         foo2(root, list);
         return isSortedList(list);

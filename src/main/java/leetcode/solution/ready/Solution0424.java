@@ -14,7 +14,7 @@ public class Solution0424 {
         int p = 0;
         for (int i = 0; i < s.length(); i++) {
             max = Math.max(max, ++w[chars[i] - 'A']);
-            if (max + k <= i - p) w[chars[p++] - 'A']--;
+            if (max + k - 1 < i - p) w[chars[p++] - 'A']--;
         }
         return chars.length - p;
     }

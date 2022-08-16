@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.ListNode;
+
 //
 // Поиск цикла в односвязном списке
 // и возврат узла с которого начинается цикл

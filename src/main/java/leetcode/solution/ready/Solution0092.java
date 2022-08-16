@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.ListNode;
+import leetcode.utils.ListNode;
 
 //
 // ListNode
@@ -14,7 +14,7 @@ public class Solution0092 {
 
     //Runtime: 0 ms, faster than 100.00% of Java online submissions for Reverse Linked List II.
     //Memory Usage: 41.3 MB, less than 77.99% of Java online submissions for Reverse Linked List II.
-    public leetcode.solution.ListNode reverseBetween(ListNode head, int left, int right) {
+    public ListNode reverseBetween(ListNode head, int left, int right) {
         if (head.next == null) return head;
         ListNode node = head;
         ListNode start = null;

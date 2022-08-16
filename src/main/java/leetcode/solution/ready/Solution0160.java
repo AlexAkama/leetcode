@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.ListNode;
+
 //
 // TreeNode
 // Определить пресекаются ли два односвязных списка, если да то вернуть узел пересечения

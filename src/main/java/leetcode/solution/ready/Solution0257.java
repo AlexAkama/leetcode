@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.TreeNode;
+import leetcode.utils.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Solution0257 {
 
     List<String> list;
 
-    public List<String> binaryTreePaths(leetcode.solution.TreeNode root) {
+    public List<String> binaryTreePaths(TreeNode root) {
         list = new ArrayList<>();
         if (root != null) foo(root, "");
         return list;

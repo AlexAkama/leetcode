@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.ListNode;
+
 //
 // Поиск цикла в односвязном списке
 // Классический алгоритм заяц и черепаха

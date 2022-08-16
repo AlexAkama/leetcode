@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.TreeNode;
+
 //
 // TreeNode
 // Глубина бинарного дерева

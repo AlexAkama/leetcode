@@ -1,5 +1,7 @@
 package leetcode.solution.ready;
 
+import leetcode.utils.TreeNode;
+
 //
 // TreeNode
 // Поиск минимального общего предка в бинарном дереве

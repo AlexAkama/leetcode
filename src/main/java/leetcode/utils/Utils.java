@@ -1,8 +1,5 @@
 package leetcode.utils;
 
-import leetcode.solution.ListNode;
-import leetcode.solution.TreeNode;
-
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;

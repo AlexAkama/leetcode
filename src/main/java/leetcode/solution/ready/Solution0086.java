@@ -1,6 +1,6 @@
 package leetcode.solution.ready;
 
-import leetcode.solution.ListNode;
+import leetcode.utils.ListNode;
 
 //
 // ListNode
@@ -10,12 +10,12 @@ public class Solution0086 {
 
     //Runtime: 0 ms, faster than 100.00% of Java online submissions for Partition List.
     //Memory Usage: 41.7 MB, less than 90.59% of Java online submissions for Partition List.
-    public leetcode.solution.ListNode partition(leetcode.solution.ListNode head, int x) {
-        leetcode.solution.ListNode node = head;
-        leetcode.solution.ListNode prevLowest = new leetcode.solution.ListNode();
+    public ListNode partition(ListNode head, int x) {
+        ListNode node = head;
+        ListNode prevLowest = new ListNode();
         head = prevLowest;
-        leetcode.solution.ListNode prevGreater = new leetcode.solution.ListNode();
-        leetcode.solution.ListNode greatHead = prevGreater;
+        ListNode prevGreater = new ListNode();
+        ListNode greatHead = prevGreater;
         ListNode next;
         while (node != null) {
             next = node.next;
