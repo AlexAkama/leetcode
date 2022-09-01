@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Utils {
+public class AppUtils {
 
-    private Utils() {
+    private AppUtils() {
     }
 
     public static void printListInString(List<? extends Serializable> list) {

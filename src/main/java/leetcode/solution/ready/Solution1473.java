@@ -1,7 +1,5 @@
 package leetcode.solution.ready;
 
-import leetcode.utils.Utils;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -43,7 +41,6 @@ public class Solution1473 {
                         variant[i] = j + 1;
                         int temp = foo(variant, cost, colorMap, priceMap, target);
                         cache.put(getCode(variant), temp);
-                        Utils.printIntArrayMonospace(variant);
                         price0 = getPositiveMin(temp, price0);
                         hasZero = true;
                     }
