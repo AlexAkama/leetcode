@@ -4,7 +4,7 @@ package leetcode.solution.ready;
 // Положительное целое число, простые множители которого ограничены 2, 3 и 5?
 // https://leetcode.com/problems/ugly-number/
 //
-public class Solution0273 {
+public class Solution0263 {
 
     private static final int[] PRIMES = new int[]{2, 3, 5};
 

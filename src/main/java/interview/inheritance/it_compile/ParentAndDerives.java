@@ -1,6 +1,6 @@
-package interview.inheritance;
+package interview.inheritance.it_compile;
 
-public class Loader {
+public class ParentAndDerives {
 
     class Parent {
 
@@ -18,5 +18,6 @@ public class Loader {
     DeriveOne d1 = new DeriveOne();
     DeriveTwo d2 = new DeriveTwo();
     //d1 = (DeriveOne) d2;
+    // Компилятор не даст присвоить (можно кастить к родителю, не к другому наследнику)
 
 }

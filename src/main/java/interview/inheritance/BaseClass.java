@@ -1,5 +1,6 @@
 package interview.inheritance;
 
+// Что будет напечатано
 public class BaseClass {
 
     int x = 0;
