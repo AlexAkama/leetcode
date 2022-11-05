@@ -1,4 +1,4 @@
-package interview.inheritance.it_compile;
+package interview.inheritance.it_compile_or_not;
 
 public class ParentAndDerives {
 
