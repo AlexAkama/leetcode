@@ -5,7 +5,7 @@ package leetcode.solution.rewrite;
 // Вернуть сумму части массива
 // https://leetcode.com/problems/range-sum-query-2d-immutable/
 //
-// Используем Дерево Фенвика
+// Используем "Дерево Фенвика"
 // https://e-maxx.ru/algo/fenwick_tree
 //
 // Вариант 1.
