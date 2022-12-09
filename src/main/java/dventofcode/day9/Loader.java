@@ -11,6 +11,8 @@ import static dventofcode.day9.Loader.Direction.LEFT;
 import static dventofcode.day9.Loader.Direction.RIGHT;
 import static dventofcode.day9.Loader.Direction.UP;
 import static dventofcode.day9.Loader.Direction.findBy;
+import static dventofcode.day9.Loader.Vector.getNullPair;
+import static dventofcode.day9.Loader.Vector.getVector;
 
 public class Loader {
 
@@ -41,7 +43,7 @@ public class Loader {
             while (line != null) {
                 var parse = parse(line);
                 for (int i = 0; i < parse.steps; i++) {
-                    head.moveTo(DirectionPair.getVector(parse.direction));
+                    head.moveTo(getVector(parse.direction));
                 }
                 line = reader.readLine();
             }
@@ -70,7 +72,6 @@ public class Loader {
 
         private int x;
         private int y;
-
         private Position next;
 
         public Position(int x, int y) {
@@ -82,7 +83,7 @@ public class Loader {
             this.next = next;
         }
 
-        public void moveTo(DirectionPair vector) {
+        public void moveTo(Vector vector) {
             if (vector == null) return;
             if (vector.h == null && vector.v == null) return;
             if (vector.h != null) {
@@ -101,17 +102,17 @@ public class Loader {
             this.next.moveTo(vector);
         }
 
-        public DirectionPair whereMoveTail(Position tail) {
+        public Vector whereMoveTail(Position tail) {
             if (this.x == tail.x && this.y == tail.y
                     || (Math.abs(this.x - tail.x) < 2 && Math.abs(this.y - tail.y) < 2))
-                return DirectionPair.getNullPair();
+                return getNullPair();
             Direction h;
             Direction v;
             h = (this.x - tail.x) > 0 ? RIGHT : LEFT;
             v = (this.y - tail.y) > 0 ? UP : DOWN;
             if (this.y == tail.y) v = null;
             if (this.x == tail.x) h = null;
-            return new DirectionPair(h, v);
+            return new Vector(h, v);
 
         }
 
@@ -122,25 +123,25 @@ public class Loader {
 
     }
 
-    private static class DirectionPair {
+    static class Vector {
 
         private final Direction h;
         private final Direction v;
 
-        public DirectionPair(Direction h, Direction v) {
+        public Vector(Direction h, Direction v) {
             this.h = h;
             this.v = v;
         }
 
-        public static DirectionPair getNullPair() {
-            return new DirectionPair(null, null);
+        public static Vector getNullPair() {
+            return new Vector(null, null);
         }
 
-        public static DirectionPair getVector(Direction direction) {
-            if (direction == UP) return new DirectionPair(null, UP);
-            if (direction == RIGHT) return new DirectionPair(RIGHT, null);
-            if (direction == DOWN) return new DirectionPair(null, DOWN);
-            if (direction == LEFT) return new DirectionPair(LEFT, null);
+        public static Vector getVector(Direction direction) {
+            if (direction == UP) return new Vector(null, UP);
+            if (direction == RIGHT) return new Vector(RIGHT, null);
+            if (direction == DOWN) return new Vector(null, DOWN);
+            if (direction == LEFT) return new Vector(LEFT, null);
             return null;
         }
 
@@ -189,6 +190,5 @@ public class Loader {
         }
 
     }
-
 
 }
