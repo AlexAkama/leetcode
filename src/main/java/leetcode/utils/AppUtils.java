@@ -33,7 +33,7 @@ public class AppUtils {
 
     public static void printIntArrayMonospace(int[] ints) {
         for (int anInt : ints) {
-            System.out.printf("%3d", anInt);
+            System.out.printf("%4d", anInt);
         }
         System.out.println();
     }
