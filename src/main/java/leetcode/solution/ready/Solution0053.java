@@ -1,4 +1,4 @@
-package leetcode.solution;
+package leetcode.solution.ready;
 
 // Dynamic Programming
 // https://leetcode.com/problems/maximum-subarray/description/
