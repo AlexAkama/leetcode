@@ -1,6 +1,10 @@
 package leetcode.solution.ready;
 
 // Dynamic Programming
+//
+// Найти подмассив с максимальной суммой
+// (без указания начала и конца)
+//
 // https://leetcode.com/problems/maximum-subarray/description/
 public class Solution0053 {
 
