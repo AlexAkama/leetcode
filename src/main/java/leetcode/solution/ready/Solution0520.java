@@ -1,7 +1,7 @@
 package leetcode.solution.ready;
 
 //
-// https://leetcode.com/problems/detect-capital/submissions/
+// https://leetcode.com/problems/detect-capital/
 //
 public class Solution0520 {
 
