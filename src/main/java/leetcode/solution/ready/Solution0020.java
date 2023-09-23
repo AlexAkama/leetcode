@@ -18,15 +18,9 @@ public class Solution0020 {
             if (c == '(' || c == '[' || c == '{') {
                 if (pointer == q.length) return false;
                 switch (c) {
-                    case '(':
-                        q[pointer++] = ')';
-                        break;
-                    case '[':
-                        q[pointer++] = ']';
-                        break;
-                    default:
-                        q[pointer++] = '}';
-                        break;
+                    case '(' -> q[pointer++] = ')';
+                    case '[' -> q[pointer++] = ']';
+                    default -> q[pointer++] = '}';
                 }
             } else if (c == ')' || c == ']' || c == '}') {
                 if (pointer < 1) return false;
